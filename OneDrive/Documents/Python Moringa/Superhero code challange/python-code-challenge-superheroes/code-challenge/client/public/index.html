@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:800&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Super Heroes</title>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+        // Check if the browser is Firefox, Firefox for Android, or Opera
+        const isUnsupportedBrowser = (
+            window.navigator.userAgent.indexOf("Firefox") !== -1 ||
+            window.navigator.userAgent.indexOf("Opera") !== -1
+        );
+
+        // If the browser is not unsupported, add the theme-color meta tag.
+        if (!isUnsupportedBrowser) {
+            const themeColorMeta = document.createElement("meta");
+            themeColorMeta.name = "theme-color";
+            themeColorMeta.content = "#000000";
+            document.head.appendChild(themeColorMeta);
+        }
+    </script>
+</body>
+</html>
